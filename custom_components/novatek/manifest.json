@@ -1,0 +1,19 @@
+{
+  "domain": "novatek",
+  "name": "Novatek",
+  "version": "0.2.0",
+  "documentation": "https://github.com/maksym-pasichnyk/Novatek-Integration",
+  "issue_tracker": "https://github.com/maksym-pasichnyk/Novatek-Integration/issues",
+  "codeowners": ["@maximmkaaa"],
+  "config_flow": true,
+  "iot_class": "local_polling",
+  "integration_type": "device",
+  "dependencies": ["network"],
+  "requirements": [],
+  "dhcp": [
+    { "hostname": "em-129*" },
+    { "hostname": "em-126*" },
+    { "hostname": "em-125*" },
+    { "hostname": "novatek*" }
+  ]
+}

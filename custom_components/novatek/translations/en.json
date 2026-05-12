@@ -1,0 +1,51 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add Novatek device",
+        "description": "Select a discovered Novatek device on your local network, then enter its password.",
+        "data": {
+          "host": "Device",
+          "password": "Password"
+        }
+      },
+      "discovery_confirm": {
+        "title": "Add discovered Novatek device",
+        "description": "Found a Novatek device at {host}. Enter its password to add it.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the selected device. Check network reachability.",
+      "invalid_auth": "Invalid password (or this is not a supported Novatek device).",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This device is already configured.",
+      "no_devices_found": "No unconfigured compatible Novatek devices were found on the local network. Devices discovered via DHCP will appear automatically in Settings > Devices & Services."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Novatek options",
+        "data": {
+          "scan_interval": "Polling interval (seconds)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "voltage": { "name": "Voltage" },
+      "current": { "name": "Current" },
+      "frequency": { "name": "Frequency" },
+      "active_power": { "name": "Active power" },
+      "apparent_power": { "name": "Apparent power" },
+      "energy_total": { "name": "Active energy" },
+      "apparent_energy": { "name": "Apparent energy" }
+    }
+  }
+}
